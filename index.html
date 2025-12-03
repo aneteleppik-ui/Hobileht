@@ -3,7 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/css/style.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!--External OWl Carousel Css CDN link-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- NAVBAR -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Hobileht</a>
+        </div>
+    </nav>
+</header>
 
 <title>Hobileht</title>
 </head>
@@ -27,12 +41,7 @@
             <div class="display-5 text-muted">ALL about Kdramas and my favourites</div>
           </h1>
           <a href="#pricing" class="btn btn-secondary btn-lg">Learn more</a>
-          <!-- open sidebar / offcanvas -->
-          <a href="#sidebar" class="d-block mt-3" data-bs-toggle="offcanvas" role="button" aria-controls="sidebar">
-            Explore my other books
-          </a>
-        </div>
-        <div class="col-md-5 text-center d-none d-md-block">
+
           <!-- tooltip -->
           <span class="tt" data-bs-placement="bottom" title="Sea otters book cover">
             <img src="assets/seaotter.jpg" class="img-fluid" alt="Sea otter floating on its back in calm water, holding a shell in its paws, surrounded by gentle ripples and soft sunlight, conveying a peaceful and playful mood">
@@ -42,48 +51,53 @@
     </div>
   </section>
 
+  
 
-    <!-- ROW START -->
-    <div class="row my-5 g-0 align-items-center justify-content-center">
 
-      <!-- Card 1 -->
-      <div class="col-8 col-lg-4 col-xl-3">
-  <a href="whc1.html" class="text-decoration-none">
-    <div class="card border-0">
-      <div class="card-body text-center py-4">
-        <img src="img/Weak_Hero_Class_1.jpeg" class="img-fluid" alt="Weak Hero">
-      </div>
-    </div>
-  </a>
-</div>
+<section id="owlSection">
+<div class="container mt-5">
 
-      <!-- Card 2 -->
-      <div class="col-9 col-lg-4 col-xl-3">
-  <a href="2521.html" class="text-decoration-none">
-    <div class="card border-primary border-2">
-      <div class="card-header text-center text-primary">Minu lemmik</div>
-      <div class="card-body text-center py-5">
-        <img src="img/2521poster.jpg" class="img-fluid mb-4" alt="K-drama Poster">
-      </div>
-    </div>
-  </a>
-</div>
+    <h1 class="display-3 text-center fw-bold">
+        <span class="text-success">Vajuta peale</span> kindlasti!
+    </h1>
 
-      <!-- Card 3 -->
-      <div class="col-8 col-lg-4 col-xl-3">
-        <a href="startup.html" class="text-decoration-none">
-        <div class="card border-0">
-          <div class="card-body text-center py-4">
-           <img src="img/stup.jpg" class="img-fluid" alt="Start up">
-        
-          </div>
+    <div class="owl-carousel owl-theme">
+
+        <div class="item">
+            <a href="whc1.html">
+                <div class="card">
+                    <img src="img/whposter.jpg" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h3>Weak Hero</h3>
+                    </div>
+                </div>
+            </a>
         </div>
-      </div>
-      </a>
-    </div>
-    <!-- ROW END -->
 
-  </div>
+        <div class="item">
+            <a href="2521.html">
+                <div class="card">
+                    <img src="img/2521poster.jpg" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h3>2521</h3>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="item">
+            <a href="startup.html">
+                <div class="card">
+                    <img src="img/stup.jpg" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h3>Start Up</h3>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</div>
 </section>
 
 <!-- topics at a glance -->
@@ -170,7 +184,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -178,6 +191,24 @@
 
 <footer>© 2025</footer>
 
+<!-- JQUERY MUST COME FIRST -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+            0: { items: 1 },
+            600: { items: 3 },
+            1000: { items: 3 }
+        }
+    });
+</script>

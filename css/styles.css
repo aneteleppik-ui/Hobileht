@@ -1,0 +1,71 @@
+/* ---------------- HERO SECTION ---------------- */
+.hero-section {
+    background: url('../img/2521all.jpg') no-repeat center center/cover;
+    height: 700px;
+    padding: 40px 0;
+    position: relative;
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35); /* dark overlay */
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ---------------- CHARACTER SECTION ---------------- */
+.characters-section {
+    background: #4c0d0d; /* dark red */
+}
+
+.character-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* ---------------- TRAILER SECTION ---------------- */
+.trailer-section {
+    background: #eaeaea;
+}
+
+.trailer-placeholder {
+    width: 100%;
+    max-width: 700px;
+    height: 350px;
+    background: #d8d8d8;
+    border: 2px solid #bbb;
+    margin: 0 auto;
+}
+
+
+/* Dark background like characters section */
+#owlCharacters {
+    background-color: #3b0a0a; /* same deep red-brown */
+}
+
+/* Remove card styles from carousel */
+.owl-carousel .item {
+    padding: 20px 0;
+}
+
+.circle-carousel-img {
+    width: 180px !important;
+    height: 180px !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
