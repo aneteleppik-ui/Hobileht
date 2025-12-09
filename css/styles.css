@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 /* ---------------- HERO SECTION ---------------- */
 .hero-section {
     height: 90vh; 
@@ -24,10 +27,22 @@
     z-index: 2;
 }
 
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
 
 /* ---------------- CHARACTER SECTION ---------------- */
 .characters-section {
-    background: #4c0d0d; /* dark red */
+    background: #4c0d0d; 
 }
 
 .character-img {
@@ -86,8 +101,6 @@
     border: 3px solid white;
 }
 
-
-
 .custom-prev, .custom-next {
     font-size: 50px;
     font-weight: bold;
@@ -123,3 +136,41 @@
     margin-top: 0 !important;
 }
 
+/* OWL CAROUSEL ARROWS */
+.carousel-nav {
+    font-size: 40px;          
+    color: white;             
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.owl-nav button {
+    background: none !important;
+    border: none !important;
+}
+
+.owl-nav {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carousel-prev {
+    margin-left: -30px; 
+}
+
+.carousel-next {
+    margin-right: -30px; 
+}
+/* FORCE ALL CAROUSEL IMAGES SAME SIZE */
+.owl-carousel .item img {
+    width: 100%;
+    height: 400px;        
+    object-fit: cover;    
+    border-radius: 6px;   
+}
+.owl-carousel .item .card {
+    height: 100%;
+}
