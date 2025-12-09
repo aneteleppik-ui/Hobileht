@@ -1,16 +1,22 @@
 /* ---------------- HERO SECTION ---------------- */
 .hero-section {
-    background: url('../img/2521all.jpg') no-repeat center center/cover;
-    height: 700px;
-    padding: 40px 0;
+    height: 90vh; 
+    display: flex;
+    align-items: center;
+    justify-content: start; 
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     position: relative;
+    padding: 40px 0;
 }
 
 .hero-section::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.35); /* dark overlay */
+    background: rgba(0,0,0,0.35); 
 }
 
 .hero-section .container {
@@ -52,7 +58,7 @@
 
 /* Dark background like characters section */
 #owlCharacters {
-    background-color: #3b0a0a; /* same deep red-brown */
+    background-color: #3b0a0a; 
 }
 
 /* Remove card styles from carousel */
@@ -69,3 +75,51 @@
     display: block !important;
     margin: 0 auto !important;
 }
+
+/* Circle images stay perfect circle */
+.circle-carousel-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: auto;
+    border: 3px solid white;
+}
+
+
+
+.custom-prev, .custom-next {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 50%;                      
+    transform: translateY(-50%);
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.2s;
+    user-select: none;
+    z-index: 20;                  
+}
+
+/* Hover effect */
+.custom-prev:hover, .custom-next:hover {
+    opacity: 1;
+}
+
+/* Left arrow */
+.custom-prev {
+    left: -40px;
+}
+
+/* Right arrow */
+.custom-next {
+    right: -40px;
+}
+
+/* Prevent Owl from overriding your arrow positions */
+.owl-nav {
+    position: relative !important;
+    margin-top: 0 !important;
+}
+
